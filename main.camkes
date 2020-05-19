@@ -1,0 +1,13 @@
+/**
+ * Copyright (C) 2019, Hensoldt Cyber GmbH
+ */
+
+import <std_connector.camkes>;
+
+import "components/Tests/test_CertParser.camkes";
+
+assembly {
+    composition {
+        component  test_CertParser  unitTest;
+    }
+}
