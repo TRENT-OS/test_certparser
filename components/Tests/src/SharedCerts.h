@@ -70,3 +70,27 @@
     "r4iuTnKYkHJAV7j5gW8uIlVaasPQbrf0fH511A8oFeeNt6ik1KIUPD9sF+5qG3Yv\r\n" \
     "UHBt9lKNPJ0Zz1AaYGW0vrE6gHB1Ql+5bNyWnFON5pnvnPBUXA96KPNueA==\r\n" \
     "-----END CERTIFICATE-----\r\n"
+
+typedef struct
+{
+    const uint8_t* cert;
+    size_t len;
+} PemData_t;
+
+/*
+ * Not everybody who includes this header needs to use all defined variables
+ */
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wunused-variable"
+
+static const uint8_t rootCert[]   = TEST_ROOT_CA_CERT;
+static const uint8_t imedCert[]   = TEST_IMED_CA_CERT;
+static const uint8_t serverCert[] = TEST_SERVER_CERT;
+
+static const PemData_t caChain[] =
+{
+    { rootCert, sizeof(rootCert) },
+    { imedCert, sizeof(imedCert) },
+};
+
+#pragma GCC diagnostic pop
