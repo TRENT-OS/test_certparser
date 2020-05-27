@@ -2,4 +2,4 @@
 
 ## Overview
 
-Provide tests for the SEOS Cert LIB
+Provide tests for the OS Cert LIB
