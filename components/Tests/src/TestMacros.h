@@ -60,9 +60,11 @@ static char testName[MAX_MSG_LEN] = "<undefined>";
 // format truncation.
 #define ASSERT_ERR(x, err) {                                                        \
     char msg[MAX_MSG_LEN];                                                          \
-    int ret = snprintf(msg, sizeof(msg), "@%s: %s == %s", testName, #x, #err);      \
+    OS_Error_t rc = (x);                                                            \
+    int ret = snprintf(msg, sizeof(msg), "@%s: %s == %s [actual value: %i]",        \
+        testName, #x, #err, rc);                                                    \
     if(ret>=sizeof(msg)) { /*Message was truncated */};                             \
-    ((void)(((x) == err) || (__assert_fail(msg, __FILE__, __LINE__, __func__),0))); \
+    ((void)((rc == err) || (__assert_fail(msg, __FILE__, __LINE__, __func__),0)));  \
 }
 // These shorthands can be used to simply check function return codes
 #define TEST_INSUFF_SPACE(fn) \
