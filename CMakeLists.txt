@@ -18,10 +18,10 @@ DeclareCAmkESComponent(test_CertParser
     C_FLAGS
         -Wall -Werror
     LIBS
-        seos_core_api
-        seos_libs
-        seos_cert
-        seos_crypto
+        os_core_api
+        os_libs
+        os_cert
+        os_crypto
 )
 
 DeclareCAmkESRootserver(main.camkes)
