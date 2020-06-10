@@ -8,11 +8,6 @@ cmake_minimum_required(VERSION 3.7.2)
 
 os_set_config_file(config.h)
 
-os_use_libs(
-    OS_LIBS
-    OS_CERT
-    OS_CRYPTO
-)
 
 #-------------------------------------------------------------------------------
 project(test_cert_lib C)
