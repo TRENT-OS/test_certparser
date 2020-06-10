@@ -34,5 +34,5 @@ DeclareCAmkESComponent(
 )
 
 
-GenerateCAmkESRootServer()
+DeclareAndCreateCamkESSystem(main.camkes)
 GenerateSimulateScript()
