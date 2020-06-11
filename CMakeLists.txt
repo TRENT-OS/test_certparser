@@ -14,15 +14,18 @@ os_use_libs(
     OS_CRYPTO
 )
 
+#-------------------------------------------------------------------------------
 project(test_cert_lib C)
 
-DeclareCAmkESComponent(test_CertParser
+DeclareCAmkESComponent(
+    test_CertParser
     SOURCES
         components/Tests/src/test_CertParser_Cert.c
         components/Tests/src/test_CertParser_Chain.c
         components/Tests/src/test_CertParser.c
     C_FLAGS
-        -Wall -Werror
+        -Wall
+        -Werror
     LIBS
         os_core_api
         os_libs
@@ -30,6 +33,6 @@ DeclareCAmkESComponent(test_CertParser
         os_crypto
 )
 
-DeclareCAmkESRootserver(main.camkes)
+
 GenerateCAmkESRootServer()
 GenerateSimulateScript()
