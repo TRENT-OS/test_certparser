@@ -7,6 +7,8 @@
 #include <stdint.h>
 #include <stdio.h>
 
+#include <camkes.h>
+
 // These are defined in the sub-tests
 void
 test_CertParser_Cert(
@@ -15,22 +17,12 @@ void
 test_CertParser_Chain(
     CertParser_t* parser);
 
-static int
-entropy(
-    void*          ctx,
-    unsigned char* buf,
-    size_t         len)
-{
-    // This would be the platform specific function to obtain entropy
-    memset(buf, 0, len);
-    return 0;
-}
-
 static CertParser_Config_t parserCfg;
 static OS_Crypto_Config_t cfgCrypto =
 {
     .mode = OS_Crypto_MODE_LIBRARY_ONLY,
-    .library.rng.entropy = entropy,
+    .library.entropy = OS_CRYPTO_ASSIGN_EntropySource(entropySource_rpc_read,
+                                                      entropySource_dp),
 };
 
 // Test Functions --------------------------------------------------------------

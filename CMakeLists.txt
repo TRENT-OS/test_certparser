@@ -28,6 +28,9 @@ DeclareCAmkESComponent(
         os_crypto
 )
 
+DeclareCAmkESComponent_EntropySource(
+    EntropySource
+)
 
 DeclareAndCreateCamkESSystem(main.camkes)
 GenerateSimulateScript()
