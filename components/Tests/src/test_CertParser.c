@@ -21,7 +21,7 @@ static CertParser_Config_t parserCfg;
 static OS_Crypto_Config_t cfgCrypto =
 {
     .mode = OS_Crypto_MODE_LIBRARY_ONLY,
-    .library.entropy = OS_CRYPTO_ASSIGN_EntropySource(
+    .library.entropy = OS_CRYPTO_ASSIGN_Entropy(
         entropy_rpc,
         entropy_port),
 };
