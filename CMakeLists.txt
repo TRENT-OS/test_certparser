@@ -13,11 +13,11 @@ os_set_config_file(config.h)
 project(test_cert_lib C)
 
 DeclareCAmkESComponent(
-    test_CertParser
+    test_OS_CertParser
     SOURCES
-        components/Tests/src/test_CertParser_Cert.c
-        components/Tests/src/test_CertParser_Chain.c
-        components/Tests/src/test_CertParser.c
+        components/Tests/src/test_OS_CertParser_Cert.c
+        components/Tests/src/test_OS_CertParser_Chain.c
+        components/Tests/src/test_OS_CertParser.c
     C_FLAGS
         -Wall
         -Werror

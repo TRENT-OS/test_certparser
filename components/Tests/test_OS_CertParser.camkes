@@ -4,7 +4,7 @@
 
 import <if_OS_Entropy.camkes>;
 
-component test_CertParser {
+component test_OS_CertParser {
     control;
 
     // For EntropySource component
