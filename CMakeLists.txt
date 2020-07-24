@@ -10,7 +10,7 @@ os_set_config_file(config.h)
 
 
 #-------------------------------------------------------------------------------
-project(test_cert_lib C)
+project(test_certparser C)
 
 DeclareCAmkESComponent(
     test_OS_CertParser
