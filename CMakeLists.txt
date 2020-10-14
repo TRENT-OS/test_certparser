@@ -1,5 +1,5 @@
 #
-# Test Certificate Parser lib
+# Test Certificate Parser library
 #
 # Copyright (C) 2020, Hensoldt Cyber GmbH
 #
