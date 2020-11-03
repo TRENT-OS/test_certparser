@@ -28,7 +28,7 @@ DeclareCAmkESComponent(
         os_crypto
 )
 
-DeclareCAmkESComponent_EntropySource(
+EntropySource_DeclareCAmkESComponent(
     EntropySource
 )
 
