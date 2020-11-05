@@ -9,16 +9,16 @@ import <if_OS_Entropy.camkes>;
 import "components/Tests/test_OS_CertParser.camkes";
 
 #include "EntropySource/camkes/EntropySource.camkes"
-DECLARE_COMPONENT_EntropySource(EntropySource)
+EntropySource_COMPONENT_DECLARE(EntropySource)
 
 assembly {
     composition {
         component  test_OS_CertParser  unitTest;
+        component  EntropySource       entropySource;
 
-        DECLARE_AND_CONNECT_INSTANCE_EntropySource(
-            EntropySource,
+        EntropySource_INSTANCE_CONNECT_CLIENT(
             entropySource,
-            unitTest.entropy_rpc,
-            unitTest.entropy_port)
+            unitTest.entropy_rpc, unitTest.entropy_port
+        )
     }
 }
