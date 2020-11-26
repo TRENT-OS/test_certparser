@@ -1,6 +1,6 @@
 #include "OS_CertParser.h"
 
-#include "TestMacros.h"
+#include "LibMacros/Test.h"
 #include "SharedCerts.h"
 
 #include <stdlib.h>
