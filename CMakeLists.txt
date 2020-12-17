@@ -25,7 +25,6 @@ DeclareCAmkESComponent(
         os_core_api
         os_libs
         os_cert
-        os_crypto
 )
 
 EntropySource_DeclareCAmkESComponent(
