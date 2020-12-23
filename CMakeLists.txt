@@ -23,7 +23,7 @@ DeclareCAmkESComponent(
         -Werror
     LIBS
         os_core_api
-        os_libs
+        lib_macros
         os_cert
 )
 
